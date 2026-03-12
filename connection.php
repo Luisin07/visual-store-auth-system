@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$database = "visual_test";
+$database = "auth_store";
 
 $conn = new mysqli($host, $user, $password, $database);
 

@@ -87,7 +87,7 @@ php-auth-store
 Create the following database:
 
 ```text
-visual_test
+auth_store
 ```
 
 Create the `users` table:
