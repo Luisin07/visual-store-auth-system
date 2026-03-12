@@ -2,7 +2,6 @@
 session_start();
 include("connection.php");
 
-$baseUrl = "/visual-ecommerce-test/";
 $message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -21,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (password_verify($password, $user["password"])) {
                 $_SESSION["user_id"] = $user["id"];
                 $_SESSION["user_name"] = $user["name"];
-                header("Location: " . $baseUrl . "dashboard.php");
+                header("Location: dashboard.php");
                 exit();
             } else {
                 $message = "Senha incorreta.";
@@ -42,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Visual Store</title>
+    <title>Login - Demo Store</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -103,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="card auth-card p-4">
     <div class="card-body">
         <div class="text-center mb-4">
-            <h2 class="brand-title">Visual Store</h2>
+            <h2 class="brand-title">Demo Store</h2>
             <p class="text-muted mb-0">Acesse sua conta</p>
         </div>
 
@@ -127,9 +126,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="text-center mt-3">
             <p class="mb-1">Ainda não tem conta?
-                <a href="<?php echo $baseUrl; ?>register.php" class="small-link">Cadastre-se</a>
+                <a href="register.php" class="small-link">Cadastre-se</a>
             </p>
-            <a href="<?php echo $baseUrl; ?>index.php" class="small-link">Voltar para a loja</a>
+            <a href="index.php" class="small-link">Voltar para a loja</a>
         </div>
     </div>
 </div>

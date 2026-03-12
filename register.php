@@ -4,7 +4,6 @@ ini_set('display_errors', 1);
 
 include("connection.php");
 
-$baseUrl = "/visual-ecommerce-test/";
 $message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -27,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bind_param("sss", $name, $email, $hashedPassword);
 
             if ($stmt->execute()) {
-                header("Location: " . $baseUrl . "login.php?success=1");
+                header("Location: login.php?success=1");
                 exit();
             } else {
                 $message = "Erro ao cadastrar usuário.";
@@ -47,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - Visual Store</title>
+    <title>Cadastro - Demo Store</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -93,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="card auth-card p-4">
     <div class="card-body">
         <div class="text-center mb-4">
-            <h2 class="brand-title">Visual Store</h2>
+            <h2 class="brand-title">Demo Store</h2>
             <p class="text-muted mb-0">Crie sua conta</p>
         </div>
 
@@ -123,10 +122,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="text-center mt-3">
             <p class="mb-2">
                 Já possui conta?
-                <a href="<?php echo $baseUrl; ?>login.php" class="small-link">Fazer login</a>
+                <a href="login.php" class="small-link">Fazer login</a>
             </p>
 
-            <a href="<?php echo $baseUrl; ?>index.php" class="small-link">Voltar para a loja</a>
+            <a href="index.php" class="small-link">Voltar para a loja</a>
         </div>
     </div>
 </div>

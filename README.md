@@ -1,4 +1,4 @@
-# Visual Store – Authentication & Storefront System
+# PHP Authentication & Storefront System
 
 Mini sistema web desenvolvido em **PHP e MySQL** como parte de um teste técnico para uma vaga de **Estágio em Suporte Técnico**.  
 O projeto simula uma estrutura básica de e-commerce com **autenticação de usuários e área restrita**, executado em ambiente local.
@@ -9,19 +9,19 @@ O projeto simula uma estrutura básica de e-commerce com **autenticação de usu
 
 O sistema apresenta dois contextos principais:
 
-### Área pública
-- Página inicial de loja virtual
-- Banner principal
-- Listagem de produtos
-- Campo de busca de produtos
-- Navegação para cadastro e login
+### Public Area
+- Public store homepage
+- Main banner
+- Product listing
+- Product search field
+- Navigation to registration and login
 
-### Área autenticada
-- Cadastro de usuários
-- Login com autenticação
-- Dashboard restrito
-- Controle de sessão
-- Logout seguro
+### Authenticated Area
+- User registration
+- User login
+- Restricted dashboard
+- Session control
+- Secure logout
 
 ---
 
@@ -58,8 +58,8 @@ O sistema apresenta dois contextos principais:
 
 # Project Structure
 
-```
-visual-ecommerce-test
+```text
+php-auth-store
 │
 ├── assets
 │   └── images
@@ -86,7 +86,7 @@ visual-ecommerce-test
 
 Create the following database:
 
-```
+```text
 visual_test
 ```
 
@@ -109,12 +109,11 @@ CREATE TABLE users (
 1. Install **XAMPP**
 2. Move the project folder to:
 
-```
+```text
 xampp/htdocs/
 ```
 
 3. Start:
-
 - Apache
 - MySQL
 
@@ -122,8 +121,8 @@ xampp/htdocs/
 
 5. Access the project in your browser:
 
-```
-http://localhost/visual-ecommerce-test/
+```text
+http://localhost/php-auth-store/
 ```
 
 ---

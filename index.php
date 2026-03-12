@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visual Store</title>
+    <title>Demo Store</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -63,7 +63,7 @@ session_start();
 
 <nav class="navbar navbar-expand-lg bg-white shadow-sm">
     <div class="container">
-        <a class="navbar-brand fw-bold text-primary" href="index.php">Visual Store</a>
+        <a class="navbar-brand fw-bold text-primary" href="index.php">Demo Store</a>
 
         <form class="d-flex w-50" onsubmit="return false;">
             <input id="searchInput" class="form-control me-2" placeholder="Buscar produtos">
@@ -182,7 +182,7 @@ session_start();
 
 <footer>
     <div class="container text-center">
-        <h4>Visual Store</h4>
+        <h4>Demo Store</h4>
         <p>Projeto de demonstração de uma loja virtual.</p>
         <p>© 2026 Todos os direitos reservados</p>
     </div>
