@@ -122,7 +122,7 @@ xampp/htdocs/
 5. Access the project in your browser:
 
 ```text
-http://localhost/php-auth-store/
+http://localhost/your-project-folder/
 ```
 
 ---
