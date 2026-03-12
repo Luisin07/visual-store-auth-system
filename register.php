@@ -4,6 +4,7 @@ ini_set('display_errors', 1);
 
 include("connection.php");
 
+$baseUrl = "/visual-ecommerce-test/";
 $message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -26,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bind_param("sss", $name, $email, $hashedPassword);
 
             if ($stmt->execute()) {
-                header("Location: login.php?success=1");
+                header("Location: " . $baseUrl . "login.php?success=1");
                 exit();
             } else {
                 $message = "Erro ao cadastrar usuário.";
@@ -122,10 +123,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="text-center mt-3">
             <p class="mb-2">
                 Já possui conta?
-                <a href="login.php" class="small-link">Fazer login</a>
+                <a href="<?php echo $baseUrl; ?>login.php" class="small-link">Fazer login</a>
             </p>
 
-            <a href="index.php" class="small-link">Voltar para a loja</a>
+            <a href="<?php echo $baseUrl; ?>index.php" class="small-link">Voltar para a loja</a>
         </div>
     </div>
 </div>
